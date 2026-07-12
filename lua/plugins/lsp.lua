@@ -84,6 +84,19 @@ return {
 				"nil_ls",
 			}
 
+			-- Custom LSP: Silver (no lspconfig entry)
+			do
+				local config = {
+					cmd = { "aglsp" },             -- or full path if not in $PATH
+					filetypes = { "silver" },
+					root_markers = { ".git" },
+					on_attach = on_attach,
+					capabilities = capabilities,
+				}
+				vim.lsp.config("agc", config)
+				vim.lsp.enable("agc")
+			end
+
 			for _, server in ipairs(servers) do
 				local config = {
 					on_attach = on_attach,

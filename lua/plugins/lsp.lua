@@ -93,8 +93,8 @@ return {
 					on_attach = on_attach,
 					capabilities = capabilities,
 				}
-				vim.lsp.config("agc", config)
-				vim.lsp.enable("agc")
+				vim.lsp.config("aglsp", config)
+				vim.lsp.enable("aglsp")
 			end
 
 			for _, server in ipairs(servers) do
